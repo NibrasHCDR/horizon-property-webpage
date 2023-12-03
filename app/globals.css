@@ -64,7 +64,7 @@
                 }
              }                    
                     /* INICIO  para tabletas (426px a 768px) */
-                    @media screen and (min-width: 432px) and (max-width: 768px) {
+                    @media screen and (min-width: 432px) and (max-width: 1023px) {
                       .contenedor-inicio{
                         display: grid;
                         grid-gap: 0rem;
@@ -112,7 +112,7 @@
                     }
                     
                     /* INICIO  para escritorio (769px en adelante) */
-                    @media screen and (min-width: 769px) {
+                    @media screen and (min-width: 1024px) {
                       .contenedor-inicio{
                         display: grid;
                         grid-gap: 0rem;
