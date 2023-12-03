@@ -1,27 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.no-select {
+  user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.myfilter {
+  filter: drop-shadow(0px 2px 10px #EB7A2E)
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+                    
+
+         /* DISEÑO CSS GRID INICIO*/
+
+            /* DISEÑO CSS GRID INICIO*/
+              @media screen and (min-width: 0px) and (max-width: 431px) {
+                .contenedor-inicio{
+                  display: grid;
+                  grid-gap: 0rem;
+                  /* Creamos las columnas y sus medidad*/
+                  grid-template-columns: 1fr;
+                  /* Creamos las filas y sus valores de medidas*/
+                  grid-template-rows: 0.35fr 0.5fr 0.5fr 0.5fr 0.5fr;
+                }
+              .header-1{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                z-index: 2;
+              }
+              .header-2{
+                grid-column: 1/2;
+                grid-row: 2/3;
+                z-index: 2;
+               }
+                .inicio-1{
+                  grid-column: 1/2;
+                  grid-row: 3/4;
+                  z-index: 2;
+                 }
+                .inicio-2{
+                  grid-column: 1/2;
+                  grid-row: 4/5;
+                  z-index: 2;
+                }
+                .inicio-4{
+                  grid-column: 1/2;
+                  grid-row: 5/6;
+                  z-index: 2;
+                }
+                .inicio-5{
+                  grid-column: 1/2;
+                  grid-row: 1/6;
+                  z-index: 0;
+                }
+                .inicio-6{
+                  grid-column: 1/2;
+                  grid-row: 1/6;
+                  z-index: 1;
+                }
+             }                    
+                    /* INICIO  para tabletas (426px a 768px) */
+                    @media screen and (min-width: 432px) and (max-width: 768px) {
+                      .contenedor-inicio{
+                        display: grid;
+                        grid-gap: 0rem;
+                        /* Creamos las columnas y sus medidad*/
+                        grid-template-columns: 1fr;
+                        /* Creamos las filas y sus valores de medidas*/
+                        grid-template-rows: 0.35fr 0.5fr 0.5fr 0.5fr 0.5fr;
+                      }
+                    .header-1{
+                      grid-column: 1/2;
+                      grid-row: 1/2;
+                      z-index: 2;
+                    }
+                    .header-2{
+                      grid-column: 1/2;
+                      grid-row: 2/3;
+                      z-index: 2;
+                     }
+                      .inicio-1{
+                        grid-column: 1/2;
+                        grid-row: 3/4;
+                        z-index: 2;
+                       }
+                      .inicio-2{
+                        grid-column: 1/2;
+                        grid-row: 4/5;
+                        z-index: 2;
+                      }
+                      .inicio-4{
+                        grid-column: 1/2;
+                        grid-row: 5/6;
+                        z-index: 2;
+                      }
+                      .inicio-5{
+                        grid-column: 1/2;
+                        grid-row: 1/6;
+                        z-index: 0;
+                      }
+                      .inicio-6{
+                        grid-column: 1/2;
+                        grid-row: 1/6;
+                        z-index: 1;
+                      }
+
+                    }
+                    
+                    /* INICIO  para escritorio (769px en adelante) */
+                    @media screen and (min-width: 769px) {
+                      .contenedor-inicio{
+                        display: grid;
+                        grid-gap: 0rem;
+                        /* Creamos las columnas y sus medidad*/
+                        grid-template-columns: 1fr 0.2fr 1fr;
+                        /* Creamos las filas y sus valores de medidas*/
+                        grid-template-rows: 0.2fr auto auto auto 0.5fr 0.1fr;
+                      }
+                    .header-1{
+                      grid-column: 1/2;
+                      grid-row: 1/2;
+                    }
+                    .header-2{
+                      grid-column: 2/4;
+                      grid-row: 1/2;
+                     }
+                      .inicio-1{
+                        grid-column: 1/3;
+                        grid-row: 2/3;
+                       }
+                      .inicio-2{
+                        grid-column: 1/3;
+                        grid-row: 3/4;
+                        z-index: 1;
+                      }
+                      .inicio-4{
+                        grid-column: 1/3;
+                        grid-row: 4/5;
+                        z-index: 1;
+                      }
+                      .inicio-5{
+                        grid-column: 3/4;
+                        grid-row: 2/7;
+                        z-index: 1;
+                      }
+                      .inicio-6{
+                        grid-column: 1/3;
+                        grid-row: 6/7;
+                        z-index: 1;
+                      }
+                          }
