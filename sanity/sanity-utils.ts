@@ -9,10 +9,6 @@ import { ContactoS } from "@/types/ContactoS";
 import { FooterS } from "@/types/FooterS";
 import clientConfig from "./config/client-config";
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
-const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION!;
-
 export async function getInicio(): Promise<InicioS[]> {
 
   return createClient(clientConfig).fetch(

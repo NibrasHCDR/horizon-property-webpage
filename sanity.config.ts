@@ -6,17 +6,14 @@ import StudioNavbar from './app/components/StudioNavbar'
 import Logo from './app/components/Logo'
 import schemaTypes from './sanity/schemas'
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
-const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION!;
 
 export default defineConfig({
   basePath: "/studio",
   name: 'SITEWIZARD_Content_Studio',
   title: 'SiteWizard Content Studio- Horizon Property',
-  projectId,
-  dataset,
-  apiVersion,
+  projectId: "2023-12-03",
+  dataset: "production",
+  apiVersion: "2023-12-03",
   plugins: [deskTool(), visionTool()],
   schema: {
     types: schemaTypes,
