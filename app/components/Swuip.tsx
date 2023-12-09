@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 "use client"
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
@@ -30,23 +30,12 @@ interface PropiedadeS {
   metros: string,
 }
 
-export default function App() {
-  const [propiedad, setPropiedad] = useState<PropiedadeS[]>([]);
+export default async function App() {
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
         const propiedades_1 = await getPropiedades();
-        setPropiedad(propiedades_1);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    }
 
-    fetchData();
-  }, []);
 
-  const slides = propiedad.map((mipropiedad) => (
+  const slides = propiedades_1.map((mipropiedad) => (
     <SwiperSlide key={mipropiedad._id} className={` ${style.swiperSlide}`}>
       <div 
       className="flex flex-col pb-12 mb-10 space-y-1 bg-white p-4 rounded-md border border-gray-400 shadow-md rounded-t-lg overflow-hidden transition-all hover:border-[#385AE0] hover:shadow-[#385AE0]">

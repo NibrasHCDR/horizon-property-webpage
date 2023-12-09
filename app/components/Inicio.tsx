@@ -144,3 +144,5 @@ export default async function Inicio() { // Especifica el tipo de estado inicial
          </div>
   )
 }
+
+
