@@ -1,4 +1,4 @@
-"use client"
+
 import React, { useEffect, useState } from 'react'
 import Header from './Header'
 import Image from 'next/image'
@@ -6,22 +6,12 @@ import { getInicio } from '@/sanity/sanity-utils'
 import { InicioS } from '@/types/InicioS'
 
 
-export default function Inicio() {
+export default async function Inicio() { // Especifica el tipo de estado inicial aquí
 
-  const [inicios, setSeccion] = useState<InicioS[]>([]); // Especifica el tipo de estado inicial aquí
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
         const data = await getInicio();
-        setSeccion(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    }
 
-    fetchData();
-  }, []);
+
     
   return (
 
@@ -29,7 +19,7 @@ export default function Inicio() {
 
         <div className="w-full h-screen">
 
-              {inicios.map((inicio) => (
+              {data.map((inicio) => (
 
             <div key={inicio._id} 
             className="w-full h-screen inset-0 bg-black bg-opacity-50"

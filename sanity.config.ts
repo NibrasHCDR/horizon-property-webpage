@@ -11,7 +11,7 @@ export default defineConfig({
   basePath: "/studio",
   name: 'SITEWIZARD_Content_Studio',
   title: 'SiteWizard Content Studio- Horizon Property',
-  projectId: "2023-12-03",
+  projectId: "xzcm1tzx",
   dataset: "production",
   apiVersion: "2023-12-03",
   plugins: [deskTool(), visionTool()],
