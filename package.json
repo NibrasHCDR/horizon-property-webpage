@@ -9,13 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^3.0.11",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.20.2",
     "framer-motion": "^10.16.12",
     "next": "14.0.3",
+    "next-sanity": "^7.0.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^4.12.0"
+    "react-icons": "^4.12.0",
+    "sanity": "^3.20.2",
+    "styled-components": "^6.1.1",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
+    "@sanity/eslint-config-studio": "^2.0.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
