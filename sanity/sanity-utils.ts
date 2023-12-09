@@ -33,7 +33,7 @@ export async function getInicio(): Promise<InicioS[]> {
             "imageBack": imageBack.asset->url,
             url,
             content
-        }`
+        }`, { next: { revalidate: 1 } }
     );
 }
 
@@ -49,7 +49,7 @@ export async function getSeccion1(): Promise<Seccion1[]> {
             subtitulo,
             subtitulo2,
             content
-        }`
+        }`, { next: { revalidate: 1 } }
     );
 }
 
@@ -66,7 +66,7 @@ export async function getPropiedades(): Promise<PropiedadesS[]> {
             banos,
             metros,
             content
-        }`
+        }`, { next: { revalidate: 1 } }
     );
 }
 
@@ -94,7 +94,7 @@ export async function getCategorias(): Promise<CategoriasS[]> {
             titulo2categoriafooter,
             telefonocategoriafooter,
             content
-        }`
+        }`, { next: { revalidate: 1 } }
     );
 }
 
@@ -113,7 +113,7 @@ export async function getOverview(): Promise<OverviewS[]> {
             titulo2,
             descripcion2,
             content
-        }`
+        }`, { next: { revalidate: 1 } }
     );
 }
 
@@ -134,7 +134,7 @@ export async function getPreferencia(): Promise<PreferenciaS[]> {
             servicio4,
             servicio5,
             content
-        }`
+        }`, { next: { revalidate: 1 } }
     );
 }
 
@@ -154,7 +154,7 @@ export async function getContacto(): Promise<ContactoS[]> {
             placeholderMensaje,
             boton,
             content
-        }`
+        }`, { next: { revalidate: 1 } }
     );
 }
 
@@ -174,6 +174,6 @@ export async function getFooter(): Promise<FooterS[]> {
             linkWeb,
             textfooter,
             content
-        }`
+        }`, { next: { revalidate: 1 } }
     );
 }
