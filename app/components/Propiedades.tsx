@@ -5,6 +5,8 @@ import Swip from '../components/Swuip';
 import { BsFillHousesFill } from 'react-icons/bs';
 import { getSeccion1 } from '@/sanity/sanity-utils';
 
+import { useRouter } from "next/router";
+
 
 const Propiedades = async () => {
 
