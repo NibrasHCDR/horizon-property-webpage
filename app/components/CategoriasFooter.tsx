@@ -1,54 +1,18 @@
-"use client"
 import { getCategorias } from '@/sanity/sanity-utils';
 import React, { useEffect, useState } from 'react'
 
 type Props = {}
 
-function CategoriasFooter({}: Props) {
+async function CategoriasFooter({}: Props) {
 
-    interface Categorias {
-        _id: string;
-        _createdAt: Date;
-        imagen1: string;
-        titulo1: string,
-        descripcion1: string,
-        imagen2: string,
-        titulo2: string,
-        descripcion2: string,
-        imagen3: string,
-        titulo3: string,
-        descripcion3: string,
-        imagen4: string,
-        titulo4: string,
-        descripcion4: string,
-        titulocategoriafooter: string,
-        subtitulocategoriafooter: string,
-        titulo2categoriafooter: string,
-        telefonocategoriafooter: string,
-       
-        // Otros campos de Seccion1
-      }
-      
-        const [seccion, setSeccion] = useState<Categorias[]>([]); // Especifica el tipo de estado inicial aquí
-      
-        useEffect(() => {
-          async function fetchData() {
-            try {
-              const categoriaFetch = await getCategorias();
-              setSeccion(categoriaFetch);
-            } catch (error) {
-              console.error('Error fetching data:', error);
-            }
-          }
-      
-          fetchData();
-        }, []);
+  const categoriaFetch = await getCategorias();
+
 
         
   return (
     <div className="bg-[#385AE0]">
 
-        {seccion.map((miseccion) => (
+        {categoriaFetch.map((miseccion) => (
 
         <div key={miseccion._id} className="w-full h-full">
 

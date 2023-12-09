@@ -1,4 +1,4 @@
-"use client"
+
 import { getContacto } from '@/sanity/sanity-utils';
 import { ContactoS } from '@/types/ContactoS';
 import React, { useEffect, useState } from 'react'
@@ -6,27 +6,15 @@ import { FcAssistant, FcGoogle, FcSms } from "react-icons/fc";
 
 type Props = {}
 
-function Contacto({}: Props) {
+async function Contacto({}: Props) {
 
-    const [seccion, setSeccion] = useState<ContactoS[]>([]); // Especifica el tipo de estado inicial aquí
-
-    useEffect(() => {
-      async function fetchData() {
-        try {
           const data = await getContacto();
-          setSeccion(data);
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-      }
-  
-      fetchData();
-    }, []);
+
     
   return (
     <div className="bg-[]">
 
-        {seccion.map((seccion_contacto) => (
+        {data.map((seccion_contacto) => (
 
         <div
         key={seccion_contacto._id}  

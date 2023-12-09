@@ -8,14 +8,9 @@ import { InicioS } from '@/types/InicioS'
 
 export default async function Inicio() { // Especifica el tipo de estado inicial aquí
 
-
         const data = await getInicio();
 
-
-    
   return (
-
-    
 
         <div className="w-full h-screen">
 

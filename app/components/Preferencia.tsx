@@ -1,4 +1,4 @@
-"use client"
+
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
@@ -9,29 +9,15 @@ import { getPreferencia } from '@/sanity/sanity-utils';
 
 type Props = {}
 
-function Preferencia({}: Props) {
+async function Preferencia({}: Props) {
 
-    const [seccion, setSeccion] = useState<PreferenciaS[]>([]); // Especifica el tipo de estado inicial aquí
-
-    useEffect(() => {
-      async function fetchData() {
-        try {
           const data = await getPreferencia();
-          setSeccion(data);
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-      }
-  
-      fetchData();
-    }, []);
-
     
   return (
     <div className="bg-[#F5F5F5]">
 
         
-     {seccion.map((seccion_servicios) => (
+     {data.map((seccion_servicios) => (
 
         <div
         key={seccion_servicios._id} 

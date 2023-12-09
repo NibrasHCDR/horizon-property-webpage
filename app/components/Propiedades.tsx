@@ -1,4 +1,4 @@
-"use client"
+
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -6,39 +6,17 @@ import Swip from '../components/Swuip';
 import { BsFillHousesFill } from 'react-icons/bs';
 import { getSeccion1 } from '@/sanity/sanity-utils';
 
-interface Seccion1 {
-  _id: string;
-  _createdAt: Date;
-  titulo: string;
-  subtitulo: string,
-  subtitulo2: string,
- 
-  // Otros campos de Seccion1
-}
 
-const Propiedades = () => {
-  const [seccion, setSeccion] = useState<Seccion1[]>([]); // Especifica el tipo de estado inicial aquí
+const Propiedades = async () => {
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
         const data = await getSeccion1();
-        setSeccion(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    }
 
-    fetchData();
-  }, []);
 
   return (
     <div className="bg-[#F5F5F5] lg:pb-12 pb-4">
-      {seccion.map((miseccion) => (
-        <motion.div
+      {data.map((miseccion) => (
+        <div
           key={miseccion._id}
-          initial={{ opacity: 0 }} // Animación de entrada inicial
-          animate={{ opacity: 1 }} // Animación una vez que los datos están disponibles
           className="h-screen w-full"
         >
           <div className="contenedor-propiedades w-full h-full lg:p-12 no-select">
@@ -75,7 +53,7 @@ const Propiedades = () => {
             </div>
 
           </div>
-        </motion.div>
+        </div>
       ))}
     </div>
   );
