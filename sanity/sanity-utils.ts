@@ -9,6 +9,7 @@ import { ContactoS } from "@/types/ContactoS";
 import { FooterS } from "@/types/FooterS";
 import clientConfig from "./config/client-config";
 
+export const dynamic = 'force-dynamic';
 export async function getInicio(): Promise<InicioS[]> {
 
   return createClient(clientConfig).fetch(
