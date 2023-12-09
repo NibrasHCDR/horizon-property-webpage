@@ -10,7 +10,11 @@ const nextConfig = {
       ],
       domains: ['i.postimg.cc' , 'photos.app.goo.gl'],// Agrega el dominio de tus imágenes aquí
     },
-    // ... otras configuraciones de Next.js, si las tienes
+
+    experimental: {
+      appDir: true,
+    },
+    // ... otras configuraciones de Next.js
   };
   
   module.exports = {

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { OverviewS } from '@/types/OverviewS';
-import { getOverview } from '@/schemas/sanity-utils';
+import { getOverview } from '@/sanity/sanity-utils';
 
 type Props = {}
 

@@ -1,13 +1,13 @@
 import Image from 'next/image'
-import Inicio from './components/Inicio'
-import Header from './components/Header'
-import Propiedades from './components/Propiedades'
-import Categorias from './components/Categorias'
-import CategoriasFooter from './components/CategoriasFooter'
-import Overview from './components/Overview'
-import Preferencia from './components/Preferencia'
-import Contacto from './components/Contacto'
-import Footer from './components/Footer'
+import Inicio from '../components/Inicio'
+import Header from '../components/Header'
+import Propiedades from '../components/Propiedades'
+import Categorias from '../components/Categorias'
+import CategoriasFooter from '../components/CategoriasFooter'
+import Overview from '../components/Overview'
+import Preferencia from '../components/Preferencia'
+import Contacto from '../components/Contacto'
+import Footer from '../components/Footer'
 
 export default async function Home() {
 

@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import { IoMdCheckmark } from "react-icons/io";
 import { PreferenciaS } from '@/types/PreferenciaS';
-import { getPreferencia } from '@/schemas/sanity-utils';
+import { getPreferencia } from '@/sanity/sanity-utils';
 
 
 type Props = {}

@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { FaInstagram, FaLinkedin} from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import { FooterS } from '@/types/FooterS';
-import { getFooter } from '@/schemas/sanity-utils';
+import { getFooter } from '@/sanity/sanity-utils';
 
 type Props = {}
 

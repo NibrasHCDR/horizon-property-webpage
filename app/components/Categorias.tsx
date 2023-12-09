@@ -1,6 +1,6 @@
 "use client"
 import categorias from '@/schemas/categoriasSchema';
-import { getCategorias } from '@/schemas/sanity-utils';
+import { getCategorias } from '@/sanity/sanity-utils';
 import React, { useEffect, useState } from 'react'
 import { FaLocationArrow } from "react-icons/fa";
 import Image from 'next/image';

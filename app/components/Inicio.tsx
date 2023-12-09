@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from './Header'
 import Image from 'next/image'
-import { getInicio } from '@/schemas/sanity-utils'
+import { getInicio } from '@/sanity/sanity-utils'
 import { InicioS } from '@/types/InicioS'
 
 

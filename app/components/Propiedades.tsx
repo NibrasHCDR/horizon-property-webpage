@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Swip from '../components/Swuip';
 import { BsFillHousesFill } from 'react-icons/bs';
-import { getSeccion1 } from '@/schemas/sanity-utils';
+import { getSeccion1 } from '@/sanity/sanity-utils';
 
 interface Seccion1 {
   _id: string;

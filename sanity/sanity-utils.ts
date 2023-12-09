@@ -7,19 +7,15 @@ import { OverviewS } from "@/types/OverviewS";
 import { PreferenciaS } from "@/types/PreferenciaS";
 import { ContactoS } from "@/types/ContactoS";
 import { FooterS } from "@/types/FooterS";
+import clientConfig from "./config/client-config";
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
 const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION!;
 
 export async function getInicio(): Promise<InicioS[]> {
-    const client = createClient({
-        projectId,
-        dataset,
-        apiVersion,
-    });
 
-  return client.fetch(
+  return createClient(clientConfig).fetch(
         groq` *[_type == "inicio"]{
             _id,
             _createdAt,
@@ -47,13 +43,8 @@ export async function getInicio(): Promise<InicioS[]> {
 
 
 export async function getSeccion1(): Promise<Seccion1[]> {
-    const client = createClient({
-        projectId,
-        dataset,
-        apiVersion,
-    });
 
-  return client.fetch(
+  return createClient(clientConfig).fetch(
         groq` *[_type == "seccion1"]{
             _id,
             _createdAt,
@@ -66,13 +57,8 @@ export async function getSeccion1(): Promise<Seccion1[]> {
 }
 
 export async function getPropiedades(): Promise<PropiedadesS[]> {
-    const client = createClient({
-        projectId,
-        dataset,
-        apiVersion,
-    });
 
-  return client.fetch(
+  return createClient(clientConfig).fetch(
         groq` *[_type == "propiedades"]{
             _id,
             _createdAt,
@@ -89,13 +75,8 @@ export async function getPropiedades(): Promise<PropiedadesS[]> {
 
 
 export async function getCategorias(): Promise<CategoriasS[]> {
-    const client = createClient({
-        projectId,
-        dataset,
-        apiVersion,
-    });
 
-  return client.fetch(
+  return createClient(clientConfig).fetch(
         groq` *[_type == "categorias"]{
             _id,
             _createdAt,
@@ -121,13 +102,8 @@ export async function getCategorias(): Promise<CategoriasS[]> {
 }
 
 export async function getOverview(): Promise<OverviewS[]> {
-    const client = createClient({
-        projectId,
-        dataset,
-        apiVersion,
-    });
 
-  return client.fetch(
+  return createClient(clientConfig).fetch(
         groq` *[_type == "overview"]{
             _id,
             _createdAt,
@@ -145,13 +121,8 @@ export async function getOverview(): Promise<OverviewS[]> {
 }
 
 export async function getPreferencia(): Promise<PreferenciaS[]> {
-    const client = createClient({
-        projectId,
-        dataset,
-        apiVersion,
-    });
 
-  return client.fetch(
+  return createClient(clientConfig).fetch(
         groq` *[_type == "preferencia"]{
             _id,
             _createdAt,
@@ -171,13 +142,8 @@ export async function getPreferencia(): Promise<PreferenciaS[]> {
 }
 
 export async function getContacto(): Promise<ContactoS[]> {
-    const client = createClient({
-        projectId,
-        dataset,
-        apiVersion,
-    });
 
-  return client.fetch(
+  return createClient(clientConfig).fetch(
         groq` *[_type == "contacto"]{
             _id,
             _createdAt,
@@ -196,13 +162,8 @@ export async function getContacto(): Promise<ContactoS[]> {
 }
 
 export async function getFooter(): Promise<FooterS[]> {
-    const client = createClient({
-        projectId,
-        dataset,
-        apiVersion,
-    });
 
-  return client.fetch(
+  return createClient(clientConfig).fetch(
         groq` *[_type == "footer"]{
             _id,
             _createdAt,

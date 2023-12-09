@@ -17,7 +17,7 @@ import { FcSalesPerformance } from "react-icons/fc";
 
 import { IoBed } from "react-icons/io5";
 import { FaBath, FaChartArea } from "react-icons/fa";
-import { getPropiedades, getSeccion1 } from '@/schemas/sanity-utils';
+import { getPropiedades, getSeccion1 } from '@/sanity/sanity-utils';
 
 interface PropiedadeS {
   _id: string;

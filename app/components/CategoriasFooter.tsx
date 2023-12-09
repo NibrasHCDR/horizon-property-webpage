@@ -1,5 +1,5 @@
 "use client"
-import { getCategorias } from '@/schemas/sanity-utils';
+import { getCategorias } from '@/sanity/sanity-utils';
 import React, { useEffect, useState } from 'react'
 
 type Props = {}

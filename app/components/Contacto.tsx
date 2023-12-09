@@ -1,5 +1,5 @@
 "use client"
-import { getContacto } from '@/schemas/sanity-utils';
+import { getContacto } from '@/sanity/sanity-utils';
 import { ContactoS } from '@/types/ContactoS';
 import React, { useEffect, useState } from 'react'
 import { FcAssistant, FcGoogle, FcSms } from "react-icons/fc";
