@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { getInicio } from '@/sanity/sanity-utils'
 import { InicioS } from '@/types/InicioS'
 
-
+export const dynamic = 'force-dynamic';
 export default async function Inicio() { // Especifica el tipo de estado inicial aquí
 
         const data = await getInicio();

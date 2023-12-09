@@ -7,7 +7,7 @@ import { getSeccion1 } from '@/sanity/sanity-utils';
 
 import { useRouter } from "next/router";
 
-
+export const dynamic = 'force-dynamic';
 const Propiedades = async () => {
 
         const data = await getSeccion1();

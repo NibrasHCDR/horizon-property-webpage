@@ -31,7 +31,7 @@ interface PropiedadeS {
   banos: string,
   metros: string,
 }
-
+export const dynamic = 'force-dynamic';
 export default function App() {
   const [propiedad, setPropiedad] = useState<PropiedadeS[]>([]);
 
