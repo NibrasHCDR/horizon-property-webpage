@@ -8,7 +8,7 @@ import schemaTypes from './sanity/schemas'
 
 
 export default defineConfig({
-  basePath: "/studio",
+  basePath: "/admin",
   name: 'SITEWIZARD_Content_Studio',
   title: 'SiteWizard Content Studio- Horizon Property',
   projectId: "xzcm1tzx",
