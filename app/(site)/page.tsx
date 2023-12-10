@@ -9,7 +9,7 @@ import Preferencia from '../components/Preferencia'
 import Contacto from '../components/Contacto'
 import Footer from '../components/Footer'
 
-export default async function Home() {
+export default function Home() {
 
   return (
 
