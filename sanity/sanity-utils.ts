@@ -13,6 +13,7 @@ import { revalidatePath } from "next/cache";
 export const dynamic = 'force-dynamic';
 export const revalidate = 1;
 
+
 export async function getInicio(): Promise<InicioS[]> {
 
 

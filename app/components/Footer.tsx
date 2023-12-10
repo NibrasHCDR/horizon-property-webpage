@@ -1,4 +1,4 @@
-
+"use client"
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -10,16 +10,28 @@ import { getFooter } from '@/sanity/sanity-utils';
 
 type Props = {}
 
-async function Footer({}: Props) {
+function Footer({}: Props) {
 
+  const [seccion, setSeccion] = useState<FooterS[]>([]); // Especifica el tipo de estado inicial aquí
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
         const data = await getFooter();
+        setSeccion(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
 
+    fetchData();
+  }, []);
 
   
   return (
     <div className="bg-[#385AE0] ">
 
-       {data.map((seccion_footer) => (
+       {seccion.map((seccion_footer) => (
 
 
         <div 

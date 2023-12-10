@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -5,17 +6,35 @@ import Swip from '../components/Swuip';
 import { BsFillHousesFill } from 'react-icons/bs';
 import { getSeccion1 } from '@/sanity/sanity-utils';
 
-import { useRouter } from "next/router";
+interface Seccion1 {
+  _id: string;
+  _createdAt: Date;
+  titulo: string;
+  subtitulo: string,
+  subtitulo2: string,
+ 
+  // Otros campos de Seccion1
+}
 
-export const dynamic = 'force-dynamic';
-const Propiedades = async () => {
+const Propiedades = () => {
+  const [seccion, setSeccion] = useState<Seccion1[]>([]); // Especifica el tipo de estado inicial aquí
 
+  useEffect(() => {
+    async function fetchData() {
+      try {
         const data = await getSeccion1();
+        setSeccion(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
 
+    fetchData();
+  }, []);
 
   return (
     <div className="bg-[#F5F5F5] lg:pb-12 pb-4">
-      {data.map((miseccion) => (
+      {seccion.map((miseccion) => (
         <div
           key={miseccion._id}
           className="h-screen w-full"

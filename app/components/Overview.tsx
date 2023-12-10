@@ -1,4 +1,4 @@
-
+"use client"
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { OverviewS } from '@/types/OverviewS';
@@ -6,14 +6,29 @@ import { getOverview } from '@/sanity/sanity-utils';
 
 type Props = {}
 
-async function Overview({}: Props) {
+function Overview({}: Props) {
 
-    const data = await getOverview();
+  const [seccion, setSeccion] = useState<OverviewS[]>([]); // Especifica el tipo de estado inicial aquí
 
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await getOverview();
+        setSeccion(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    fetchData();
+  }, []);
+    
+
+  
   return (
     <div className="bg-[#F5F5F5]">
 
-       {data.map((seccion_inicio) => (
+       {seccion.map((seccion_inicio) => (
 
         <div 
         key={seccion_inicio._id} 
