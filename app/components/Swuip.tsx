@@ -33,6 +33,7 @@ interface PropiedadeS {
 }
 export const dynamic = 'force-dynamic';
 export const revalidate = 1;
+
 export default function App() {
   const [propiedad, setPropiedad] = useState<PropiedadeS[]>([]);
 
