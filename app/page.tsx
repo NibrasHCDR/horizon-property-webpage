@@ -9,7 +9,12 @@ import Preferencia from './components/Preferencia'
 import Contacto from './components/Contacto'
 import Footer from './components/Footer'
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 1;
+
 export default function Home() {
+
+    
 
   return (
 
