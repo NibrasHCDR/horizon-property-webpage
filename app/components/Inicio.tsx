@@ -8,6 +8,41 @@ import { InicioS } from '@/types/InicioS'
 
 export default function Inicio() {
 
+  const handleButtonClick1 = () => {
+    const membershipsSection = document.getElementById('propiedades');
+    if (membershipsSection) {
+      membershipsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleButtonClick2 = () => {
+    const membershipsSection = document.getElementById('preferencia');
+    if (membershipsSection) {
+      membershipsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleButtonClick3 = () => {
+    const membershipsSection = document.getElementById('overview');
+    if (membershipsSection) {
+      membershipsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleButtonClick4 = () => {
+    const membershipsSection = document.getElementById('contacto');
+    if (membershipsSection) {
+      membershipsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleButtonClick5 = () => {
+    const membershipsSection = document.getElementById('contacto');
+    if (membershipsSection) {
+      membershipsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const [inicios, setSeccion] = useState<InicioS[]>([]); // Especifica el tipo de estado inicial aquí
 
   useEffect(() => {
@@ -63,11 +98,23 @@ export default function Inicio() {
                <div className="header-2 w-full h-auto bg-transparent">
 
                 <div className="lg:p-10 grid justify-center items-center lg:flex space-y-2 text-center lg:text-start lg:space-x-10 text-white lg:items-end lg:justify-end xl:text-lg lg:text-lg text-lg">
-                    <h1 className="lg:py-4 cursor-pointer ">{inicio.navBar1}</h1>
-                    <h1 className="lg:py-4 cursor-pointer ">{inicio.navBar2}</h1>
-                    <h1 className="lg:py-4 cursor-pointer ">{inicio.navBar3}</h1>
-                    <h1 className="lg:py-4 cursor-pointer">{inicio.navBar4}</h1>
-                    <button className="lg:py-3 lg:px-5 p-2 bg-[#385AE0] rounded-md text-white transition-transform duration-500 hover:scale-105">{inicio.navBar5}</button>
+                    <a className="lg:py-4 cursor-pointer" onClick={handleButtonClick1}>
+                      {inicio.navBar1}
+                    </a>
+                    <a className="lg:py-4 cursor-pointer" onClick={handleButtonClick2}>
+                      {inicio.navBar2}
+                    </a>
+                    <a className="lg:py-4 cursor-pointer" onClick={handleButtonClick3}>
+                      {inicio.navBar3}
+                    </a>
+                    <a className="lg:py-4 cursor-pointer" onClick={handleButtonClick4}>
+                      {inicio.navBar4}
+                    </a>
+                    <button 
+
+                    className="lg:py-3 lg:px-5 p-2 bg-[#385AE0] rounded-md text-white transition-transform duration-500 hover:scale-105" onClick={handleButtonClick5}>
+                      {inicio.navBar5}
+                    </button>
                 </div>
 
               </div>
@@ -95,7 +142,7 @@ export default function Inicio() {
                             {inicio.subtitulo1}
                         </h1>
                         <div className="flex lg:justify-start lg:items-start justify-center items-center">
-                        <button className="lg:py-3 lg:px-8 p-2 lg:text-lg bg-[#385AE0] text-white rounded-md font-firasans transition-transform duration-500 hover:scale-105">
+                        <button className="lg:py-3 lg:px-8 p-2 lg:text-lg bg-[#385AE0] text-white rounded-md font-firasans transition-transform duration-500 hover:scale-105" onClick={handleButtonClick1}>
                            {inicio.boton1}
                         </button>
                         </div>
